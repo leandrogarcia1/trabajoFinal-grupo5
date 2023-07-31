@@ -1,17 +1,37 @@
 import React, { useState } from 'react';
-import { MDBRow, MDBCol, MDBInput, MDBCheckbox, MDBBtn, MDBIcon, MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane } from 'mdb-react-ui-kit';
+import {
+    MDBCard,
+    MDBRow,
+    MDBCol,
+    MDBInput,
+    MDBCheckbox,
+    MDBBtn,
+    MDBIcon,
+    MDBTabs,
+    MDBTabsItem,
+    MDBTabsLink,
+    MDBTabsContent,
+    MDBTabsPane,
+    MDBCardImage
+  } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-export default function App() {
-  const [loginRegisterActive, setLoginRegisterActive] = useState('login');
+
+export default function Registro() {
+    const [loginRegisterActive, setLoginRegisterActive] = useState('login');
 
   const handleLoginRegisterClick = (tab) => {
     setLoginRegisterActive(tab);
   };
-
   return (
-    <div>
+    <MDBCard style={{ maxWidth: '540px' }}>
+      <MDBRow className='g-0'>
+        <MDBCol md='4'>
+          <MDBCardImage src='https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp' alt='...' fluid />
+        </MDBCol>
+        <MDBCol md='8'>
+        <div>
       <MDBTabs pills justify className='mb-3'>
         <MDBTabsItem>
           <MDBTabsLink
@@ -76,5 +96,8 @@ export default function App() {
         </MDBTabsPane>
       </MDBTabsContent>
     </div>
+        </MDBCol>
+      </MDBRow>
+    </MDBCard>
   );
 }
