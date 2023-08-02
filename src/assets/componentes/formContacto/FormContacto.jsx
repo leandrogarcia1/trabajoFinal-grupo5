@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import './styleFormContacto.css'
 
 const Contacto = () => {
     const [formData, setFormData] = useState({
-        name: "",
+        nombre: "",
+        apellido: "",
         email: "",
-        phone: "",
-        message: "",
+        telefono: "",
+        mensaje: "",
 });
 
 const handleChange = (e) => {
@@ -22,10 +24,11 @@ const handleSubmit = (e) => {
     console.log("Form data:", formData);
     // reiniciamos el formulario.
     setFormData({
-        name: "",
+        nombre: "",
+        apellido: "",
         email: "",
-        phone: "",
-        message: "",
+        telefono: "",
+        mensaje: "",
     });
 };
 
@@ -34,18 +37,29 @@ return (
     <h2>Contacto</h2>
     <form onSubmit={handleSubmit}>
         <div>
-            <label htmlFor="name">Nombre:</label>
+            <label htmlFor="nombre">Nombre: </label>
             <input
                 type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+                id="nombre"
+                name="nombre"
+                value={formData.nombre}
                 onChange={handleChange}
                 required
             />
         </div>
         <div>
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="apellido">Apellido: </label>
+            <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                value={formData.apellido}
+                onChange={handleChange}
+                required
+            />
+        </div>
+        <div>
+            <label htmlFor="email">Email: </label>
             <input
                 type="email"
                 id="email"
@@ -56,22 +70,22 @@ return (
         />
         </div>
         <div>
-            <label htmlFor="phone">Teléfono:</label>
+            <label htmlFor="telefono">Teléfono: </label>
             <input
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
+                value={formData.telefono}
                 onChange={handleChange}
                 required
             />
         </div>
         <div>
-            <label htmlFor="message">Mensaje:</label>
+            <label htmlFor="mensaje">Mensaje: </label>
             <textarea
-                id="message"
-                name="message"
-                value={formData.message}
+                id="mensaje"
+                name="mensaje"
+                value={formData.mensaje}
                 onChange={handleChange}
                 required
             />
