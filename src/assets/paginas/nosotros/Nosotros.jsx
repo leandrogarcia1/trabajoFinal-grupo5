@@ -1,90 +1,86 @@
 //import React from 'react';
-import './styleNosotros.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import "./styleNosotros.css";
 
 const data = [
 {
     id: 1,
-    name: "Persona 1",
-    position: "Cargo 1",
-    description: "Descripción de la persona 1...",
+    name: "Leandro Garcia",
     linkedin: "https://www.linkedin.com/in/persona1/",
     github: "https://github.com/persona1",
     instagram: "",
+    image: "public/persona.jpeg",
 },
 {
     id: 2,
-    name: "Persona 2",
-    position: "Cargo 2",
-    description: "Descripción de la persona 2...",
-    linkedin: "https://www.linkedin.com/in/persona2/",
+    name: "Esteban Samaniego",
+    linkedin: "https://www.linkedin.com/in/esteban-maximiliano-samaniego-33b4a3263/",
     github: "https://github.com/persona2",
     instagram: "",
+    image: "public/persona.jpeg",
 },
 {
     id: 3,
-    name: "Persona 3",
-    position: "Cargo 3",
-    description: "Descripción de la persona 3...",
+    name: "Yonathan Pachado",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/persona3",
     instagram: "",
+    image: "public/persona.jpeg",
 },
 {
     id: 4,
     name: "Persona 4",
-    position: "Cargo 4",
-    description: "Descripción de la persona 4...",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/persona3",
     instagram: "",
+    image: "public/persona.jpeg",
 },
 {
     id: 5,
     name: "Persona 5",
-    position: "Cargo 5",
-    description: "Descripción de la persona 5...",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/persona3",
     instagram: "",
+    image: "public/persona.jpeg",
 },
 {
     id: 6,
     name: "Persona 6",
-    position: "Cargo 6",
-    description: "Descripción de la persona 6...",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/persona3",
-    instagram: "",
+    instagram: "https://instagram.com/persona3",
+    image: "public/persona.jpeg",
 },
 
 ];
 
+// ...otros importes...
+
 const QuienesSomos = () => {
     return (
-        <div>
-            <h2>Quiénes Somos</h2>
-            <div className="person-cards">
-                {data.map((person) => (
-                <div key={person.id} className="person-card">
-                    <h3>{person.name}</h3>
-                    <p>{person.position}</p>
-                    <p>{person.description}</p>
-                    <div className="links">
-                        <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-                        LinkedIn 
-                        </a>
-                        <a href={person.github} target="_blank" rel="noopener noreferrer">
-                        GitHub 
-                        </a>
-                        <a href={person.instagram} target="_blank" rel="noopener noreferrer">
-                        Instagram 
-                        </a>
-                    </div>
+    <div className="container-nosotros">
+        <h1 className="titulo-nosotros">Quiénes Somos</h1>
+        <div className="nosotros-cards">
+            {data.map((person) => (
+            <div key={person.id} className="nosotros-card">
+                <img className="nosotros-image" src={person.image} alt={person.name} />
+                <h2>{person.name}</h2>
+                <div className="nosotros-links">
+                    <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="nosotros-icon" icon={faLinkedin} />
+                    </a>
+                    <a href={person.github} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="nosotros-icon" icon={faGithub} />
+                    </a>
+                    <a href={person.instagram} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon className="nosotros-icon" icon={faInstagram} />
+                    </a>
                 </div>
-        ))}
-            </div>
+            </div>))}
         </div>
-    );
+    </div>
+);
 };
 
 export default QuienesSomos;
