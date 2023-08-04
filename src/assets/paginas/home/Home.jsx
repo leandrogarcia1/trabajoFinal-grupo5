@@ -5,19 +5,11 @@ import React from 'react';
 
 const Home = () => {
 
-  
+
     return (
         <>
         <main className="">
             <section className="home row ">
-
-            
-            <article className='card-home col-md-4'>
-              <a href="">
-                <img src="../public/img/meterproducto.png" alt="" />
-              </a>
-                <span>Añadir Producto</span>
-              </article>
 
               <article className='card-home col-md-4'>
               <a href="">
@@ -58,9 +50,7 @@ const Home = () => {
 
         </main>
 
-        <div className="footer">
-           
-        </div>
+        
         </>
     );
 };
