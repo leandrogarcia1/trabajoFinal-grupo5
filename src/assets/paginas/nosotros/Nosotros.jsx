@@ -41,7 +41,7 @@ const data = [
     name: "Luis Contreras",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/LHContreras",
-    instagram: "",
+    instagram: "https://www.instagram.com/lhcontreras13/",
     image: "public/img/luis.jpeg",
 },
 {
