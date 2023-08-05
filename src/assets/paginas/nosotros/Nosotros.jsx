@@ -7,46 +7,46 @@ const data = [
 {
     id: 1,
     name: "Leandro Garcia",
-    linkedin: "https://www.linkedin.com/in/persona1/",
-    github: "https://github.com/persona1",
-    instagram: "",
-    image: "public/img/persona.jpeg",
+    linkedin: "https://www.linkedin.com/in/leandro-federico-garc%C3%ADa-27015a20a/",
+    github: "https://github.com/leandrogarcia1",
+    instagram: "https://www.instagram.com/leandrogarcia1/",
+    image: "public/img/leandro.jpeg",
 },
 {
     id: 2,
     name: "Esteban Samaniego",
     linkedin: "https://www.linkedin.com/in/esteban-maximiliano-samaniego-33b4a3263/",
-    github: "https://github.com/persona2",
-    instagram: "",
+    github: "https://github.com/MaxiSama12",
+    instagram: "https://www.instagram.com/estebannn_______/",
     image: "public/img/esteban.jpeg",
 },
 {
     id: 3,
     name: "Yonathan Pachado",
-    linkedin: "https://www.linkedin.com/in/persona3/",
-    github: "https://github.com/persona3",
-    instagram: "",
+    linkedin: "https://www.linkedin.com/in/yonathan-pachado/",
+    github: "https://github.com/YPachado99",
+    instagram: "https://www.instagram.com/ypachado99/",
     image: "public/img/Yonathan.jpg",
 },
 {
     id: 4,
-    name: "Ricardo",
-    linkedin: "https://www.linkedin.com/in/persona3/",
-    github: "https://github.com/persona3",
-    instagram: "",
+    name: "Ricardo Silva",
+    linkedin: "https://www.linkedin.com/in/franco-ricardo-silva-71048421b/",
+    github: "https://github.com/ricardosilv1",
+    instagram: "https://www.instagram.com/ricardosilv1/",
     image: "public/img/ricardo.jpeg",
 },
 {
     id: 5,
-    name: "Luis",
+    name: "Luis Contreras",
     linkedin: "https://www.linkedin.com/in/persona3/",
-    github: "https://github.com/persona3",
+    github: "https://github.com/LHContreras",
     instagram: "",
     image: "public/img/luis.jpeg",
 },
 {
     id: 6,
-    name: "Nahuel",
+    name: "Nahuel Bardera",
     linkedin: "https://www.linkedin.com/in/persona3/",
     github: "https://github.com/persona3",
     instagram: "https://instagram.com/persona3",
@@ -55,7 +55,6 @@ const data = [
 
 ];
 
-// ...otros importes...
 
 const QuienesSomos = () => {
     return (
