@@ -47,10 +47,10 @@ const data = [
 {
     id: 6,
     name: "Nahuel Bardera",
-    linkedin: "https://www.linkedin.com/in/persona3/",
-    github: "https://github.com/persona3",
-    instagram: "https://instagram.com/persona3",
-    image: "public/img/persona.jpeg",
+    linkedin: "https://ar.linkedin.com/in/nahuel-francisco-bardera-889094252",
+    github: "https://github.com/hermanito135",
+    instagram: "https://instagram.com/itzhermanito135?utm_source=qr&igshid=ZGUzMzM3NWJiOQ%3D%3D",
+    image: "public/img/nahuel.jpeg",
 },
 
 ];
