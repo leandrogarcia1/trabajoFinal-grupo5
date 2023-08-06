@@ -91,7 +91,7 @@ const Contacto = () => {
             <div className="form-group">
                 <label htmlFor="mensaje">Mensaje: </label>
                 <textarea
-                    className="form-control"
+                    className="form-textarea form-control"
                     type="text"
                     id="mensaje"
                     name="mensaje"
