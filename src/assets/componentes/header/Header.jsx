@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "./styleHeader.css";
 
-const Header = () => {
+const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
+
+    const toggleNav = () => {
+        setIsOpen(!isOpen);
+    }
   return (
     <div className="Navbar">
       <span className="nav-logo">Code Stockers</span>
@@ -14,11 +18,11 @@ const Header = () => {
         <a href="#">Registro</a>
         <a href="#">Login</a>
       </div>
-      <div className={`nav-toggle ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
-        <div className="bar"></div>
+      <div className={`toggleNav ${ isOpen ? 'open' : ''}`} onClick={toggleNav}>
+      <div className="bar"></div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default Navbar;
