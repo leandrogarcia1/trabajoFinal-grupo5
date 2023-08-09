@@ -1,13 +1,28 @@
 
 import './App.css'
-import Registro from './assets/componentes/registro/Registro'
+
+import Footer from './assets/componentes/footer/Footer'
+import Header from './assets/componentes/header/Header'
+import { BrowserRouter } from 'react-router-dom';
+
+
+
+
+import Rutas from './assets/componentes/rutas/Rutas'
 
 function App() {
   
 
   return (
     <>
-      <Registro/>
+    <BrowserRouter>
+    
+    <Rutas/>
+    
+    
+      <Footer/>
+    </BrowserRouter>
+   
     </>
   )
 }
