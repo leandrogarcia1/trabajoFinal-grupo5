@@ -1,10 +1,13 @@
 import './App.css'
-import Header from './assets/componentes/header/Header'
+import Footer from './assets/componentes/footer/Footer'
+//import Header from './assets/componentes/header/Header'
+
+
 function App() {
  
   return (
     <>
-  <Header />
+ <Footer />
     </>
   )
 }
