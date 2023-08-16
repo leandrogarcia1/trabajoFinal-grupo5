@@ -1,36 +1,40 @@
+<<<<<<< HEAD
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+=======
+>>>>>>> origin/nosotros-contacto-Yonathan
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*{
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-image: linear-gradient(
+  40deg,
+  hsl(10deg 15% 53%) 0%,
+  hsl(3deg 16% 54%) 6%,
+  hsl(357deg 16% 55%) 13%,
+  hsl(351deg 17% 55%) 19%,
+  hsl(345deg 17% 56%) 25%,
+  hsl(332deg 16% 55%) 31%,
+  hsl(322deg 14% 53%) 37%,
+  hsl(310deg 12% 51%) 44%,
+  hsl(298deg 10% 50%) 50%,
+  hsl(278deg 20% 46%) 56%,
+  hsl(257deg 31% 43%) 63%,
+  hsl(236deg 41% 39%) 69%,
+  hsl(216deg 51% 35%) 75%,
+  hsl(223deg 43% 40%) 81%,
+  hsl(231deg 33% 44%) 87%,
+  hsl(238deg 24% 48%) 94%,
+  hsl(246deg 15% 53%) 100%
+);
 }
 
+<<<<<<< HEAD
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -67,3 +71,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }*/
+=======
+>>>>>>> origin/nosotros-contacto-Yonathan
