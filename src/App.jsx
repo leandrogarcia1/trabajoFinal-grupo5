@@ -9,19 +9,24 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 import Rutas from './assets/componentes/rutas/Rutas'
+import UserContext, { UsuariosContext } from './assets/context/UserContext';
+
 
 function App() {
-  
+ 
 
   return (
     <>
-    <BrowserRouter>
+    <UserContext>
+      <BrowserRouter>
+      
+      <Rutas/>
+      
+      
+        <Footer/>
+      </BrowserRouter>
+    </UserContext>
     
-    <Rutas/>
-    
-    
-      <Footer/>
-    </BrowserRouter>
    
     </>
   )
