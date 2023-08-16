@@ -21,12 +21,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-router-dom": "^6.14.2",
     "sort-by": "^1.2.0"
-=======
-    "react-router-dom": "^6.14.2"
->>>>>>> origin/nosotros-contacto-Yonathan
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

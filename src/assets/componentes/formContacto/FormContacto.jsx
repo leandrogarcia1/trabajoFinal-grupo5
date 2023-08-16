@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styleFormContacto.css";
+import { Link } from 'react-router-dom'
 
 const Contacto = () => {
     const [formData, setFormData] = useState({

@@ -3,6 +3,7 @@ import Login from "../../paginas/login/Login";
 import UsuarioControl from "../../paginas/usuariosControl/UsuariosControl";
 import NewUsuario from "../../paginas/usuariosControl/NewUsuario"
 
+import Nosotros from "../../paginas/nosotros/Nosotros";
 
 
 const Rutas = () => {
@@ -13,7 +14,7 @@ const Rutas = () => {
       
       <Route path="/users" element={<UsuarioControl />} />
       <Route path="/newusers" element={<NewUsuario />} />
-      
+      <Route path="/nosotros" element={<Nosotros />} />
       
     </Routes>
   );
