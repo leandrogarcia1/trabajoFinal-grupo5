@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+>>>>>>> origin/Esteban-Home
 import './App.css'
 
 import Footer from './assets/componentes/footer/Footer'
@@ -17,6 +22,7 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
     <UserContext>
       <BrowserRouter>
       
@@ -28,6 +34,9 @@ function App() {
     </UserContext>
     
    
+=======
+    
+>>>>>>> origin/Esteban-Home
     </>
   )
 }
