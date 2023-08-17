@@ -58,7 +58,8 @@ const data = [
 
 const QuienesSomos = () => {
     return (
-    <div className="container-nosotros">
+        
+<div className="container-nosotros" >
         <h1 className="titulo-nosotros">Quiénes Somos</h1>
         <div className="nosotros-cards">
             {data.map((person) => (
@@ -79,6 +80,8 @@ const QuienesSomos = () => {
             </div>))}
         </div>
     </div>
+       
+    
 );
 };
 

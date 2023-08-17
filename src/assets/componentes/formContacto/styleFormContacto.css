@@ -1,17 +1,10 @@
-*{
+/**{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --primer-color: #997A74;
-    --segundo-color: #A37C86;
-    --tercer-color: #BB72BC;
-    --cuarto-color: #2C51BB;
-    --quinto-color: #787499;
-    --sexto-color: #F6F6F6;
-}
+
 
 .container-contacto{
     display: flex;
@@ -22,7 +15,7 @@
 
 .card {
     width: 28.1rem;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid #020202;
     border-radius: 5%;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.1);
     overflow: hidden;
@@ -52,7 +45,7 @@
 .form-group label {
     display: block;
     font-size: 1rem;
-    color: var(--sexto-color);
+    color: #0a0707;
     font-weight: bold;
     margin-bottom: 0.1rem;
 }
@@ -64,7 +57,7 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid #0a0707;
     border-radius: 0.25rem;
 }
 
@@ -106,3 +99,15 @@
         max-width: 100%;
     }
 }
+
+:root{
+    --primer-color: #997A74;
+    --segundo-color: #A37C86;
+    --tercer-color: #BB72BC;
+    --cuarto-color: #2C51BB;
+    --quinto-color: #787499;
+    --sexto-color: #F6F6F6;
+}
+
+
+*/

@@ -4,7 +4,8 @@ import UsuarioControl from "../../paginas/usuariosControl/UsuariosControl";
 import NewUsuario from "../../paginas/usuariosControl/NewUsuario"
 
 import Nosotros from "../../paginas/nosotros/Nosotros";
-
+import Home from "../../paginas/home/Home"
+import Almacen from "../../paginas/almacen/Almacen";
 
 const Rutas = () => {
   return (
@@ -15,7 +16,10 @@ const Rutas = () => {
       <Route path="/users" element={<UsuarioControl />} />
       <Route path="/newusers" element={<NewUsuario />} />
       <Route path="/nosotros" element={<Nosotros />} />
-      
+      <Route path="/home" element={<Home />} />
+      <Route path="/almacen" element={<Almacen/>} />
+
+
     </Routes>
   );
 };
