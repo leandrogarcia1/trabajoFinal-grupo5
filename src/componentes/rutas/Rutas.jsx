@@ -5,7 +5,9 @@ import NewUsuario from "../../paginas/usuariosControl/NewUsuario"
 
 import Nosotros from "../../paginas/nosotros/Nosotros";
 import Home from "../../paginas/home/Home"
+import HomeAdm from "../../paginas/home/HomeAdm"
 import Almacen from "../../paginas/almacen/Almacen";
+import AlmacenAdm from "../../paginas/almacen/AlmacenAdm";
 
 const Rutas = () => {
   return (
@@ -17,7 +19,9 @@ const Rutas = () => {
       <Route path="/newusers" element={<NewUsuario />} />
       <Route path="/nosotros" element={<Nosotros />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/homeadm" element={<HomeAdm />} />
       <Route path="/almacen" element={<Almacen/>} />
+      <Route path="/almacenadm" element={<AlmacenAdm/>} />
 
 
     </Routes>

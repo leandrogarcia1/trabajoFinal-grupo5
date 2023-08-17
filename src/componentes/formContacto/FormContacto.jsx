@@ -35,7 +35,7 @@ const Contacto = () => {
 
     return (
         <div >
-                <div className="container-contacto">
+                <div className="container-contacto m-4">
     <div className="card">
         <div className="card-header">
             <h2 className="text-header">Contacto</h2>

@@ -8,7 +8,7 @@ import {
   MDBRow,
   MDBBtn
 } from 'mdb-react-ui-kit';
-import logo from '../../img/logo.png';
+import logo from '../../assets/img/logo.png';
 
 export default function Footer() {
   return (

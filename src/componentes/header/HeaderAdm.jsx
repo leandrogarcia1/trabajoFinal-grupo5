@@ -10,10 +10,10 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 import { MDBNavbarNav } from 'mdb-react-ui-kit';
-import Rutas from '../rutas/Rutas';
 
 
-export default function Header() {
+
+export default function HeaderAdm() {
   const [showNavExternal, setShowNavExternal] = useState(false);
 
   return (
@@ -21,8 +21,8 @@ export default function Header() {
       <MDBCollapse show={showNavExternal}>
         <div className='bg-dark p-4'>
         <MDBNavbarNav>
-            <MDBNavbarLink href='/home' style={{ color: '#FFFFFF' }}>Home</MDBNavbarLink>
-            <MDBNavbarLink active aria-current='' href='/almacen' style={{ color: '#FFFFFF' }} >
+            <MDBNavbarLink href='/homeadm' style={{ color: '#FFFFFF' }}>Home</MDBNavbarLink>
+            <MDBNavbarLink active aria-current='' href='/almacenadm' style={{ color: '#FFFFFF' }} >
               Almacen
             </MDBNavbarLink>
             <MDBNavbarLink href='#' style={{ color: '#FFFFFF' }}>Ventas</MDBNavbarLink>

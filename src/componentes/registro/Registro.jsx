@@ -17,7 +17,7 @@ import {
   } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import logo from '../../img/logo.png';
+import logo from '../../assets/img/logo.png';
 import UsuarioControl from '../../paginas/usuariosControl/UsuariosControl';
 
 
