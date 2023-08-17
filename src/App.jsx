@@ -5,13 +5,15 @@ import './App.css'
 
 import Footer from './componentes/footer/Footer'
 
-import { BrowserRouter } from 'react-router-dom';
+
 
 
 
 
 import Rutas from './componentes/rutas/Rutas'
 import UserContext, { UsuariosContext } from './context/UserContext';
+import ProductsContext from './context/ProductsContext';
+
 
 
 function App() {
@@ -20,13 +22,16 @@ function App() {
   return (
     <>
     <UserContext>
-      <BrowserRouter>
-      
+      <ProductsContext>
       <Rutas/>
       
       
-        <Footer/>
-      </BrowserRouter>
+      <Footer/>
+      </ProductsContext>
+      
+      
+      
+      
     </UserContext>
     
    

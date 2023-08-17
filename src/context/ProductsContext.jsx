@@ -2,18 +2,18 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 
-export const UsuariosContext = createContext()
+export const ProductosContext = createContext()
 
 // eslint-disable-next-line react/prop-types
-const UserContext= ({children}) => {
+const ProductsContext= ({children}) => {
     
-    const [users,setUsers]=useState()
+    const [productos, setProductos]=useState()
 
-    const getUsers= async()=> {
+    const getProductos= async()=> {
         try{
             const response=await axios.get("http://localhost:8080/users")
             console.log(response)
-            setUsers(response.data)
+            setProductos(response.data)
             
         }catch (error){
             console.log(error)
@@ -21,15 +21,16 @@ const UserContext= ({children}) => {
     }
 
     useEffect(()=>{
-        getUsers()
+        getProductos()
     },[])
 
 
     return(
-        <UsuariosContext.Provider value={{users,setUsers}}>
+        <ProductosContext.Provider value={{productos,
+            setProductos}}>
             {children}
-        </UsuariosContext.Provider>
+        </ProductosContext.Provider>
     )
 }
 
-export default UserContext
+export default ProductsContext

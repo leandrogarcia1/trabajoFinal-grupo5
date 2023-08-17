@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "gentente",
+      "mail": "garcialeandrofede@gmail.com",
+      "contraseña": "leandro123",
+      "telefono": "03816271544",
+      "url": "",
+      "id": 6,
+      "usuarioAdm": "si"
+    },
+    {
+      "nombre": "Sonia",
+      "apellido": "Gomez",
+      "role": "Atencion al cliente",
+      "mail": "SoniaGomez@gmail.com",
+      "contraseña": "Son654",
+      "telefono": "381435434",
+      "url": "",
+      "id": 7,
+      "usuarioAdm": "no"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "",
+      "deposito": "",
+      "stockMinimo": "",
+      "categoria": "",
+      "stock": "",
+      "fechaControl": "",
+      "precio": "",
+      "nota": "",
+      "id": 8
+    },
+    {
+      "nombre": "Daniel",
+      "apellido": "Garcia",
+      "role": "Ingeniro",
+      "mail": "daniGarica@gmail.com",
+      "contraseña": "dani1234`",
+      "telefono": "254789",
+      "url": "",
+      "usuarioAdm": "si",
+      "id": 9
+    },
+    {
+      "nombre": "Daniel",
+      "apellido": "Garcia",
+      "role": "Ingeniro",
+      "mail": "daniGarica@gmail.com",
+      "contraseña": "dani1234`",
+      "telefono": "254789",
+      "url": "",
+      "usuarioAdm": "si",
+      "id": 10
+    },
+    {
+      "nombre": "Daniel",
+      "apellido": "Garcia",
+      "role": "Ingeniro",
+      "mail": "daniGarica@gmail.com",
+      "contraseña": "dani1234`",
+      "telefono": "254789",
+      "url": "",
+      "usuarioAdm": "si",
+      "id": 11
+    }
+  ],
+  "productos": [
+    {
+      "id": "",
+      "img": "https://picsum.photos/200/300",
+      "producto": "Mate",
+      "deposito": "Las talitas",
+      "stockMinimo": "3",
+      "categoria": "articulo perosnal",
+      "stock": "12",
+      "fechaControl": "17/08/2023",
+      "precio": "1526",
+      "nota": "unicamente color rojo"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "Coca 1.5 L",
+      "deposito": "",
+      "stockMinimo": "25",
+      "categoria": "Bebida",
+      "stock": "58",
+      "fechaControl": "17/8/208",
+      "precio": "560",
+      "nota": "cocas de 1 litro ",
+      "id": "17-vPK7"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "fanta 1.5 L",
+      "deposito": "",
+      "stockMinimo": "52",
+      "categoria": "Bebida",
+      "stock": "789",
+      "fechaControl": "17/8/208",
+      "precio": "2587",
+      "nota": "fanta rica",
+      "id": "KSDmW1g"
+    }
+  ]
+}
