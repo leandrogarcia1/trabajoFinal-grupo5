@@ -1,15 +1,40 @@
 
-import React, { useContext } from 'react';
-//import { MDBDataTableV5 } from 'mdbreact';
+import React, { useContext,useState  } from 'react';
 import { ProductosContext } from '../../context/ProductsContext';
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody,MDBIcon  } from 'mdb-react-ui-kit';
-
+import Swal from 'sweetalert2';
+import {  Modal } from "react-bootstrap";
+import FormUpdateProductos from './FormUpdateProductos';
 
 
 export default function TablaAlmacenAdm() {
   
-const{productos,setProductos}=useContext(ProductosContext)
+const{productos,setProductos, deleteProducto,updateProducto }=useContext(ProductosContext)
 
+const [editProducto, setEditProducto] = useState();
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+const handleEdit = (producto) => {
+  
+  setEditProducto(producto);
+  handleShow();
+};
+
+const handleDelete = (id) => {
+  deleteProducto(id);
+  
+  Swal.fire({
+    icon: "success",
+    title: "Producto Eliminado",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+  
+};
 
 return (
   <>
@@ -21,7 +46,7 @@ return (
         <th scope='col'>Deposito</th>
         <th scope='col'>Stock Minimo</th>
         <th scope='col'>Categoria</th>
-        <th scope='col'>stock</th>
+        <th scope='col'>Stock</th>
         <th scope='col'>Fecha de Control Stock</th>
         <th scope='col'>Precio</th>
         <th scope='col'>Nota</th>
@@ -80,13 +105,13 @@ return (
           
         </td>
         <td>
-          <MDBBtn color='link' rounded size='sm'>
+          <MDBBtn color='link' rounded size='sm' onClick={() => handleEdit(producto)} >
           Edit
           </MDBBtn>
           
         </td>
         <td>
-          <MDBBtn color='link' rounded size='sm'>
+          <MDBBtn color='link' rounded size='sm' onClick={() => handleDelete(producto.id)}>
           <MDBIcon fas icon="trash" />
           </MDBBtn>
         </td>
@@ -95,6 +120,14 @@ return (
       )}
   </MDBTableBody>
   </MDBTable>
+  <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Edicion de Producto</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <FormUpdateProductos editProducto={editProducto} handleClose={handleClose} />
+                </Modal.Body>
+              </Modal>
   </div>
   </>
       

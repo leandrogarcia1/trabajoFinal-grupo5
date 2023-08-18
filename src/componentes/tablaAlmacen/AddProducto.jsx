@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState,useContext } from 'react';
+
 import {
   MDBRow,
   MDBCol,
@@ -8,12 +8,16 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import { Col, Container, Row } from 'react-bootstrap';
+import { ProductosContext } from '../../context/ProductsContext';
+import Swal from 'sweetalert2';
 
 
 
 export default function AddProducto() {
+  const { postProducto } = useContext(ProductosContext);
 
   const[productos, setProductos]=useState({
+
     
         img:"https://picsum.photos/200/300",
         producto: "",
@@ -26,6 +30,10 @@ export default function AddProducto() {
         nota: "",
       
   })
+
+  
+
+
   const handleChange = (e)=>{
     setProductos({...productos,[e.target.name]: e.target.value}) //actualizo el estaco con el valor del input
   }
@@ -35,8 +43,14 @@ export default function AddProducto() {
   const handleSudmit = (e)=> {
     e.preventDefault()
     try{
-      const response =axios.post(" http://localhost:8080/productos",productos)
-      console.log(response)
+      postProducto(productos);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Producto agregado",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       setProductos({
         img:"https://picsum.photos/200/300",
         producto: "",
