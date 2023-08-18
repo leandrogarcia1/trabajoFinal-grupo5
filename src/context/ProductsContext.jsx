@@ -4,6 +4,8 @@ import { createContext, useEffect, useState } from "react";
 
 export const ProductosContext = createContext()
 
+
+
 // eslint-disable-next-line react/prop-types
 const ProductsContext= ({children}) => {
     
@@ -11,7 +13,7 @@ const ProductsContext= ({children}) => {
 
     const getProductos= async()=> {
         try{
-            const response=await axios.get("http://localhost:8080/users")
+            const response=await axios.get("http://localhost:8080/productos")
             console.log(response)
             setProductos(response.data)
             
@@ -24,7 +26,7 @@ const ProductsContext= ({children}) => {
         getProductos()
     },[])
 
-
+    console.log(productos,"---desde context")
     return(
         <ProductosContext.Provider value={{productos,
             setProductos}}>

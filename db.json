@@ -70,7 +70,7 @@
   ],
   "productos": [
     {
-      "id": "",
+      
       "img": "https://picsum.photos/200/300",
       "producto": "Mate",
       "deposito": "Las talitas",
@@ -79,7 +79,8 @@
       "stock": "12",
       "fechaControl": "17/08/2023",
       "precio": "1526",
-      "nota": "unicamente color rojo"
+      "nota": "unicamente color rojo",
+      "id": "15-vPK8"
     },
     {
       "img": "https://picsum.photos/200/300",
@@ -104,6 +105,30 @@
       "precio": "2587",
       "nota": "fanta rica",
       "id": "KSDmW1g"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "tv 43 led",
+      "deposito": "",
+      "stockMinimo": "1",
+      "categoria": "electronica",
+      "stock": "3",
+      "fechaControl": "17/8/208",
+      "precio": "5879966",
+      "nota": "nueva",
+      "id": "CCoB61W"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "Notbook lenovo",
+      "deposito": "",
+      "stockMinimo": "1",
+      "categoria": "electronica",
+      "stock": "5",
+      "fechaControl": "18/08/2023",
+      "precio": "5623584",
+      "nota": "ram 5 g, 1T, color negra",
+      "id": "25_TVfO"
     }
   ]
 }
