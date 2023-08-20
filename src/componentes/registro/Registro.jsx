@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
     MDBCard,
@@ -18,10 +18,41 @@ import {
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from '../../assets/img/logo.png';
-import UsuarioControl from '../../paginas/usuariosControl/UsuariosControl';
+
+import { useState, useContext } from "react";
+import { UsuariosContext } from "../../context/UserContext";
 
 
 export default function Registro() {
+
+  const [mail, setMail] = useState("");
+  const [contraseña, setContraseña] = useState("");
+
+
+  const {users}=useContext(UsuariosContext)
+  console.log(users, "users")
+  console.log(mail, contraseña, "usemail y pasworders")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      const user= users.find(user => user.mail=== mail && user.contraseña === contraseña)
+      console.log(user)
+      if (user){
+        alert("Usuario encontrado")
+        localStorage.setItem("user",JSON.stringify(user))
+        window.location.href="/homeadm"
+      }else{
+        alert("Usuario no encontrado")
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  };
+
+
+
+
     const [loginRegisterActive, setLoginRegisterActive] = useState('login');
 
   const handleLoginRegisterClick = (tab) => {
@@ -38,13 +69,20 @@ export default function Registro() {
           <div>
         
 
-        <MDBTabsContent>
+        <MDBTabsContent  onSubmit={handleSubmit}>
           <MDBTabsPane show={loginRegisterActive === 'login'}>
             <form className='m-3'>
               <h2 className='text-center m-5'>Bienvenido</h2>
 
-              <MDBInput className='mb-4 ' type='email' id='form7Example1' label='Email address' />
-              <MDBInput className='mb-4' type='password' id='form7Example2' label='Password' />
+              <MDBInput className='mb-4 ' 
+             value={mail}
+             onChange={(e) => setMail(e.target.value)}
+   
+              type='mail' name='mail' label='Correo Electronico' />
+              <MDBInput className='mb-4' 
+             value={contraseña}
+             onChange={(e) => setContraseña(e.target.value)}
+              type='contraseña' name='contraseña' label='Contraseña' />
 
               <MDBRow className='mb-4'>
                 <MDBCol className='d-flex justify-content-center'>

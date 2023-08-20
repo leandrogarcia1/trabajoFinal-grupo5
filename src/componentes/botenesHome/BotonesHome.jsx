@@ -13,7 +13,7 @@ const BotonesHome = () => {
         <main className="bodyBotones">
             <section className="home row ">
             <article className='card-home col-md-4'>
-              <a href="/almacen">
+              <a href="/almacenadm">
                 <img src="../public/img/almacen.png" alt="" />
               </a>
                 <span>Almacen</span>
@@ -26,7 +26,12 @@ const BotonesHome = () => {
                 <span>Ventas</span>
               </article>
 
-             
+              <article className='card-home col-md-4'>
+              <a href="">
+                <img src="../public/img/controlinventario.png" alt="" />
+              </a>
+                <span>Gestion Proveedores</span>
+              </article>
 
               <article className='card-home'>
               <a href="">
@@ -44,7 +49,13 @@ const BotonesHome = () => {
 
               
 
-             
+              <article className='card-home '>
+              <a href="/users">
+                <img src="../public/img/controlusuarios.png" alt="" />
+              </a>
+              <span>Control Usuarios</span>
+              </article>
+        
             </section>
 
         </main>

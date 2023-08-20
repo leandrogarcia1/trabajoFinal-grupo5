@@ -8,7 +8,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
     
   const [producto, setProducto] = useState(editProducto);
 
-  const { updateProductos } = useContext(ProductosContext);
+  const { updateProducto } = useContext(ProductosContext);
 
   const handleChange = (e) => {
     setProducto({ ...producto, [e.target.name]: e.target.value });
@@ -16,7 +16,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
 
   const handleEdit = (e) => {
     e.preventDefault();
-    updateProductos(producto);
+    updateProducto(producto);
     Swal.fire({
       icon: "success",
       title: "Producto Editado",
@@ -32,7 +32,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
       
         <Row>
           <Col>
-            <form >
+            <form onSubmit={handleEdit}>
               <div className="mb-3">
                 <label htmlFor="producto" className="form-label">
                   Producto
@@ -55,7 +55,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
                   className="form-control"
                   value={producto.img}
                   onChange={handleChange}
-                  name="imagen"
+                  name="img"
                   aria-describedby="Imagen"
                 />
               </div>
@@ -73,16 +73,16 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
                 />
               </div>
               <div className="mb-3">
-                <label htmlFor="stock" className="form-label">
-                  Stock Minimo
+              <label htmlFor="stock" className="form-label">
+                  Stock
                 </label>
                 <input
                   type="number"
                   className="form-control"
                   value={producto.stockMinimo}
                   onChange={handleChange}
-                  name="stockmin"
-                  aria-describedby="stock Minimo"
+                  name="stockMinimo"
+                  aria-describedby="stockmin"
                 />
               </div>
               <div className="mb-3">
@@ -116,7 +116,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
                   Fecha de Control Stock
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   value={producto.fechaControl}
                   onChange={handleChange}

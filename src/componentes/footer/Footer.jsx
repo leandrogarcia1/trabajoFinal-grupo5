@@ -25,42 +25,40 @@ export default function Footer() {
           </MDBCol>
 
           <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase' style={{ color: '#2C5188' }} >Redes</h5>
+          <a href="/nosotros"><h5 className='text-uppercase m-2' style={{ color: '#2C5188' }} >Nosotros</h5></a>
+
+            <h5 className='text-uppercase ' style={{ color: '#2C5188' }} > Nuestras Redes:</h5>
 
             <section className='mb-4'>
-          <MDBBtn outline color="Primary" floating className='m-1' href='#!' role='button'>
+          <MDBBtn outline color="Primary" floating className='m-1' href='https://www.facebook.com/RollingCodeSchool' role='button'>
             <MDBIcon fab icon='facebook-f' />
           </MDBBtn>
 
-          <MDBBtn outline color="Primary" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='twitter' />
-          </MDBBtn>
+          
 
-          <MDBBtn outline color="Primary" floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='google' />
-          </MDBBtn>
-
-          <MDBBtn outline color="Primary" floating className='m-1' href='#!' role='button'>
+          <MDBBtn outline color="Primary" floating className='m-1' href='https://www.instagram.com/rollingcodeschool/' role='button'>
             <MDBIcon fab icon='instagram' />
           </MDBBtn>
 
-          <MDBBtn outline color="Primary " floating className='m-1' href='#!' role='button'>
+          <MDBBtn outline color="Primary " floating className='m-1' href='https://www.linkedin.com/company/rollingcode/' role='button'>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
 
-          <MDBBtn outline color="Primary  " floating className='m-1' href='#!' role='button'>
-            <MDBIcon fab icon='github' />
-          </MDBBtn>
+        
+          
+
         </section>
           </MDBCol>
+          
+
         </MDBRow>
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: '#000000', color: '#FFFFFF' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-white'  href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a>
+       <p>
+
+       </p>
+        
       </div>
     </MDBFooter>
   );

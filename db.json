@@ -71,20 +71,8 @@
   "productos": [
     {
       "img": "https://picsum.photos/200/300",
-      "producto": "Notbook lenovo",
-      "deposito": "",
-      "stockMinimo": "1",
-      "categoria": "electronica",
-      "stock": "5",
-      "fechaControl": "18/08/2023",
-      "precio": "5623584",
-      "nota": "ram 5 g, 1T, color negra",
-      "id": "25_TVfO"
-    },
-    {
-      "img": "https://picsum.photos/200/300",
       "producto": "Notbook php",
-      "deposito": "",
+      "deposito": "salta",
       "stockMinimo": "1",
       "categoria": "Bebida",
       "stock": "789",
@@ -131,18 +119,6 @@
     },
     {
       "img": "https://picsum.photos/200/300",
-      "producto": "",
-      "deposito": "",
-      "stockMinimo": "",
-      "categoria": "",
-      "stock": "",
-      "fechaControl": "",
-      "precio": "",
-      "nota": "",
-      "id": "Q822MmI"
-    },
-    {
-      "img": "https://picsum.photos/200/300",
       "producto": "Notbook ",
       "deposito": "",
       "stockMinimo": "25",
@@ -152,6 +128,18 @@
       "precio": "2587",
       "nota": "nueva",
       "id": "c1B9Deq"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "mate",
+      "deposito": "san luis",
+      "stockMinimo": "4",
+      "categoria": "arte",
+      "stock": "89º",
+      "fechaControl": "20/8/2023",
+      "precio": "5879",
+      "nota": "rojos",
+      "id": "jdO4JUj"
     }
   ]
 }

@@ -37,24 +37,22 @@ const ProductsContext= ({children}) => {
         console.log(id, "deleteProducto")
         try {
           await axios.delete(`http://localhost:8080/productos/${id}`);
-          const newProductos = productos.filter((producto) => producto._id !== id);
-          setProductos(newProductos);
+          
         } catch (error) {
           console.log(error);
         }
       };
     
-      const updateProducto = async (updatedProduct) => {
-        console.log(updatedProduct, "updateProducto")
+      const updateProducto = async (producto) => {
+        
         try {
           await axios.put(
-            `http://localhost:8080/productos/${updatedProduct._id}`,
-            updatedProduct
+            `http://localhost:8080/productos/${producto.id}`,
+            producto
           );
-          const newProductos = productos.map((producto) =>
-            producto._id === updatedProduct._id ? updatedProduct : producto
-          );
-          setProductos(newProductos);
+          await getProductos()
+          
+          
         } catch (error) {
           console.log(error);
         }

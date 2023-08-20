@@ -103,6 +103,7 @@ export default function AddProducto() {
                 <MDBInput  value={productos.precio} onChange={handleChange} name='precio'   label='Precio' />
                 </MDBCol>
             </MDBRow>
+            <MDBInput wrapperClass='mb-4 '  value={productos.deposito} onChange={handleChange}  name='deposito' rows={4} label='Deposito' />
             <MDBInput wrapperClass='mb-4 '  value={productos.nota} onChange={handleChange}  name='nota' rows={4} label='Informacion Adicional' />
             
             <MDBBtn  className='mb-4' type='submit' block>
