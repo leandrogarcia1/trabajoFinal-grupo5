@@ -41,7 +41,7 @@ export default function Registro() {
       if (user){
         alert("Usuario encontrado")
         localStorage.setItem("user",JSON.stringify(user))
-        window.location.href="/homeadm"
+        window.location.href="/home"
       }else{
         alert("Usuario no encontrado")
       }

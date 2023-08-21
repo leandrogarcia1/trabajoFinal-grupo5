@@ -1,7 +1,7 @@
 import "./styleBotenesHome.css"
 import React from 'react';
 
-
+const usuarioLogueado=JSON.parse(localStorage.getItem("user"))
 
 const BotonesHome = () => {
 
@@ -9,11 +9,12 @@ const BotonesHome = () => {
     return (
         
         <>
-        
-        <main className="bodyBotones">
+        {usuarioLogueado.usuarioAdm.toLowerCase() === "si" ? (
+          <>
+          <main className="bodyBotones">
             <section className="home row ">
             <article className='card-home col-md-4'>
-              <a href="/almacenadm">
+              <a href="/almacen">
                 <img src="../public/img/almacen.png" alt="" />
               </a>
                 <span>Almacen</span>
@@ -59,6 +60,47 @@ const BotonesHome = () => {
             </section>
 
         </main>
+          </>):(
+            <>
+            <main className="bodyBotones">
+            <section className="home row ">
+            <article className='card-home col-md-4'>
+              <a href="/almacen">
+                <img src="../public/img/almacen.png" alt="" />
+              </a>
+                <span>Almacen</span>
+              </article>
+
+              <article className='card-home col-md-4'>
+              <a href="">
+                <img src="../public/img/venta.png" alt="" />
+              </a>
+                <span>Ventas</span>
+              </article>
+
+              
+
+              <article className='card-home'>
+              <a href="">
+                <img src="../public/img/gestionpedidos.png" alt="" />
+              </a>
+              <span>Pedidos</span>
+              </article>
+          
+              <article className='card-home'>
+              <a href="">
+                <img src="../public/img/informes.png" alt="" />
+              </a>
+              <span>Informe y Analisis</span>
+              </article>
+
+              
+            </section>
+
+        </main>
+            </>
+          )
+          }
 
         
         </>

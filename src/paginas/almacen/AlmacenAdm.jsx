@@ -1,6 +1,6 @@
 
 import BotonHomeAdm from "../../componentes/botones/BotonHomeAdm"
-import HeaderAdm from "../../componentes/header/HeaderAdm"
+import Header from "../../componentes/header/Header"
 import AddProducto from "../../componentes/tablaAlmacen/AddProducto"
 
 
@@ -17,7 +17,7 @@ function AlmacenAdm() {
     return (
       <>
       
-      <HeaderAdm/>
+      <Header/>
       <BotonHomeAdm/>
       <h1 className="m-4 text-center font-weight-bold">Agregar Nuevo Producto:</h1>
       <AddProducto/>
