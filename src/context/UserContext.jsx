@@ -20,6 +20,43 @@ const UserContext= ({children}) => {
         }
     }
 
+    const postUsuario= async(user)=> {
+        try{
+            const response=await axios.post("http://localhost:8080/users",user)
+            console.log(response)
+            setProductos([...users, response.data]);
+            
+        }catch (error){
+            console.log(error)
+        }
+    }
+    const deleteUsuario = async (id) => {
+        console.log(id, "deleteUsuario")
+        try {
+          await axios.delete(`http://localhost:8080/users/${id}`);
+          
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      const updateUser = async (user) => {
+        
+        try {
+          await axios.put(
+            `http://localhost:8080/users/${user.id}`,
+            user
+          );
+          await getUsers()
+          
+          
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+
+
     const logout = () => {
         localStorage.removeItem("user");
         window.location.href = "/";
@@ -31,7 +68,7 @@ const UserContext= ({children}) => {
 
 
     return(
-        <UsuariosContext.Provider value={{users,setUsers,logout}}>
+        <UsuariosContext.Provider value={{users,setUsers,logout,deleteUsuario,postUsuario,updateUser}}>
             {children}
         </UsuariosContext.Provider>
     )

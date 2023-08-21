@@ -1,16 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody,MDBIcon  } from 'mdb-react-ui-kit';
 import { UsuariosContext } from '../../context/UserContext';
-
-
-
+import Swal from 'sweetalert2';
+import {  Modal } from "react-bootstrap";
+import FormUpdateUsers from './FormUpdateUsers';
 
 
 export default function TablaUsuarios() {
 
-  const{users,setUsers}=useContext(UsuariosContext)
+  const{users,setUsers,deleteUsuario,updateUser}=useContext(UsuariosContext)
 
+
+  const [editUser, setEditUser] = useState();
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+const handleEdit = (user) => {
   
+  setEditUser(user);
+  handleShow();
+};
+  
+  const handleDelete = (id) => {
+    deleteUsuario(id);
+    
+    Swal.fire({
+      icon: "success",
+      title: "Usuario Eliminado",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    
+  };
 
   return (
     <>
@@ -41,7 +65,7 @@ export default function TablaUsuarios() {
           <td>
             <div className='d-flex align-items-center'>
               <img
-                src='https://mdbootstrap.com/img/new/avatars/8.jpg'
+                src={user.url}
                 alt=''
                 style={{ width: '45px', height: '45px' }}
                 className='rounded-circle'
@@ -61,13 +85,15 @@ export default function TablaUsuarios() {
           </td>
           <td>{user.telefono}</td>
           <td>
-            <MDBBtn color='link' rounded size='sm'>
+            <MDBBtn color='link' rounded size='sm'
+            onClick={() => handleEdit(user)}>
             Edit
             </MDBBtn>
             
           </td>
           <td>
-            <MDBBtn color='link' rounded size='sm'>
+            <MDBBtn color='link' rounded size='sm'
+            onClick={() => handleDelete(user.id)}>
             <MDBIcon fas icon="trash" />
             </MDBBtn>
           </td>
@@ -76,6 +102,14 @@ export default function TablaUsuarios() {
         )}
     </MDBTableBody>
     </MDBTable>
+    <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Edicion de Usuario</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <FormUpdateUsers editUser={editUser} handleClose={handleClose} />
+                </Modal.Body>
+              </Modal>
     </div>
     </>
         

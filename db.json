@@ -7,32 +7,33 @@
       "mail": "garcialeandrofede@gmail.com",
       "contraseña": "leandro123",
       "telefono": "03816271544",
-      "url": "",
+      "url": "https://picsum.photos/200/300",
       "id": 6,
       "usuarioAdm": "si"
     },
     {
-      "nombre": "Sonia",
+      "nombre": "Sonia del valle",
       "apellido": "Gomez",
       "role": "Atencion al cliente",
       "mail": "SoniaGomez@gmail.com",
       "contraseña": "Son654",
       "telefono": "381435434",
-      "url": "",
+      "url": "https://picsum.photos/200/300",
       "id": 7,
       "usuarioAdm": "no"
     },
     {
-      "img": "https://picsum.photos/200/300",
-      "producto": "",
-      "deposito": "",
-      "stockMinimo": "",
-      "categoria": "",
-      "stock": "",
-      "fechaControl": "",
-      "precio": "",
-      "nota": "",
-      "id": 8
+      "nombre": "sergio",
+      "apellido": "Garcia isla",
+      "role": "contador",
+      "mail": "Sergiogarica@gmail.com",
+      "contraseña": "segi123",
+      "telefono": "2547896554",
+      "url": "https://picsum.photos/200/300",
+      "usuarioAdm": "no",
+      "id": 9,
+      "Adm": "sis",
+      "puesto": "Ingeniro3"
     },
     {
       "nombre": "Daniel",
@@ -41,31 +42,9 @@
       "mail": "daniGarica@gmail.com",
       "contraseña": "dani1234`",
       "telefono": "254789",
-      "url": "",
-      "usuarioAdm": "si",
-      "id": 9
-    },
-    {
-      "nombre": "Daniel",
-      "apellido": "Garcia",
-      "role": "Ingeniro",
-      "mail": "daniGarica@gmail.com",
-      "contraseña": "dani1234`",
-      "telefono": "254789",
-      "url": "",
+      "url": "https://picsum.photos/200/300",
       "usuarioAdm": "si",
       "id": 10
-    },
-    {
-      "nombre": "Daniel",
-      "apellido": "Garcia",
-      "role": "Ingeniro",
-      "mail": "daniGarica@gmail.com",
-      "contraseña": "dani1234`",
-      "telefono": "254789",
-      "url": "",
-      "usuarioAdm": "si",
-      "id": 11
     }
   ],
   "productos": [
