@@ -11,17 +11,18 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 import { MDBNavbarNav } from 'mdb-react-ui-kit';
-//import UsuariosContext from '../../context/UserContext.jsx';
-//import  { UsuariosContext } from '../../context/UserContext';
+
+import  { UsuariosContext } from '../../context/UserContext';
 
 
-//const {logout}=useContext(UsuariosContext)
-//const {logout}=useContext(UsuariosContext)
+
+
 const usuarioLogueado=JSON.parse(localStorage.getItem("user"))
 
 export default function Header() {
   const [showNavExternal, setShowNavExternal] = useState(false);
 
+  const {logout}=useContext(UsuariosContext)
   return (
     <>
     {usuarioLogueado.usuarioAdm.toLowerCase() === "si" ? (
@@ -40,7 +41,7 @@ export default function Header() {
             <MDBNavbarLink  href='/users'  style={{ color: '#FFFFFF' }}>
               Control de Usuarios
             </MDBNavbarLink>
-            <MDBBtn outline className='mx-2' color='danger'  >Cerrar Sesion</MDBBtn>
+            <MDBBtn outline className='mx-2' color='danger' onClick={logout}  >Cerrar Sesion</MDBBtn>
             
           </MDBNavbarNav>
         </div>
@@ -75,7 +76,7 @@ export default function Header() {
             
             <MDBNavbarLink href='#'style={{ color: '#FFFFFF' }}>Pedidos</MDBNavbarLink>
             <MDBNavbarLink href='#'style={{ color: '#FFFFFF' }}>Informe y Analisis</MDBNavbarLink>
-            
+            <MDBBtn outline className='mx-2' color='danger' onClick={logout}  >Cerrar Sesion</MDBBtn>
           </MDBNavbarNav>
         </div>
       </MDBCollapse>
