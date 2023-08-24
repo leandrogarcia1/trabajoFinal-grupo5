@@ -8,6 +8,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { Col, Container, Row } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export default function NuevoUsuario() {
   const [dataUser, setDataUser] = useState({
@@ -26,6 +27,62 @@ export default function NuevoUsuario() {
 
   const handleSudmit = (e) => {
     e.preventDefault();
+    // Validación de campos requeridos
+    const requiredFields = [
+      "nombre",
+      "apellido",
+      "role",
+      "mail",
+      "contraseña",
+      "telefono",
+      "usuarioAdm",
+    ];
+    const invalidFields = requiredFields.filter((field) => !dataUser[field]);
+    if (invalidFields.length > 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Todos los campos son obligatorios",
+        text: `Complete los datos faltantes`,
+      });
+      return;
+    }
+
+    // Validación de longitud mínima y máxima
+    const fieldLengthRequirements = {
+      nombre: { min: 2, max: 50 },
+      apellido: { min: 2, max: 50 },
+      role: { min: 2, max: 50 },
+      mail: { min: 5, max: 100 },
+      contraseña: { min: 3, max: 100 },
+      telefono: { min: 7, max: 15 },
+      usuarioAdm: { min: 2, max: 10 },
+    };
+
+    for (const field of Object.keys(fieldLengthRequirements)) {
+      const length = dataUser[field].length;
+      const { min, max } = fieldLengthRequirements[field];
+
+      if (length < min || length > max) {
+        Swal.fire({
+          icon: "error",
+          title: `Campo ${field}`,
+          text: `El campo ${field} no cumple con los requisitos de longitud.`,
+        });
+        return;
+      }
+    }
+
+    // Validación de formato de correo electrónico
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(dataUser.mail)) {
+      Swal.fire({
+        icon: "error",
+        title: "Formato de correo electrónico inválido",
+        text: "Por favor ingresa un correo electrónico válido.",
+      });
+      return;
+    }
+
     try {
       const response = axios.post(
         "http://localhost:8081/api/user/register",
@@ -45,7 +102,7 @@ export default function NuevoUsuario() {
     } catch (error) {
       console.log(error);
     }
-  }; //envio los datos a mi fake api
+  };
 
   return (
     <>

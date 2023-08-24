@@ -14,11 +14,11 @@ function Almacen() {
           <>
             <Header />
             <BotonHome />
-            <h1 className="m-4 text-center font-weight-bold">
+            <h1 style={{ textAlign: "center", fontSize: "36px", fontWeight: "bold", color: "#333", margin: "20px 0" }} >
               Agregar Nuevo Producto:
             </h1>
             <AddProducto />
-            <h1 className="m-4 text-center font-weight-bold">Almacen:</h1>
+            <h1 style={{ textAlign: "center", fontSize: "36px", fontWeight: "bold", color: "#333", margin: "20px 0" }}>Almacen:</h1>
             <TablaAlmacenAdm />
           </>
         </>
@@ -26,7 +26,7 @@ function Almacen() {
         <>
           <Header />
           <BotonHome />
-          <h1 className="m-4 text-center font-weight-bold">Almacen:</h1>
+          <h1 style={{ textAlign: "center", fontSize: "36px", fontWeight: "bold", color: "#333", margin: "20px 0" }}>Almacen:</h1>
           <TablaAlmacenAdm />
         </>
       )}

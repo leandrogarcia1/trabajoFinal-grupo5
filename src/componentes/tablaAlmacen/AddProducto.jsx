@@ -32,6 +32,24 @@ export default function AddProducto() {
 
   const handleSudmit = (e) => {
     e.preventDefault();
+    // Verificar campos obligatorios
+  if (
+    !productos.img ||
+    !productos.producto ||
+    !productos.deposito ||
+    productos.stockMinimo === 0 ||
+    !productos.categoria ||
+    productos.stock === 0 ||
+    !productos.fechaControl
+  ) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "Faltan completar algunos campos obligatorios",
+    });
+    return; // Detener el envío si hay campos obligatorios faltantes
+  }
+
     try {
       postProducto(productos);
       Swal.fire({

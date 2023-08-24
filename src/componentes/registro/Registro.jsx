@@ -73,23 +73,12 @@ export default function Registro() {
                       className="mb-4"
                       value={contraseña}
                       onChange={(e) => setContraseña(e.target.value)}
-                      type="contraseña"
+                      type="password"
                       name="contraseña"
                       label="Contraseña"
                     />
 
-                    <MDBRow className="mb-4">
-                      <MDBCol className="d-flex justify-content-center">
-                        <MDBCheckbox
-                          id="form7Example3"
-                          label="Remember me"
-                          defaultChecked
-                        />
-                      </MDBCol>
-                      <MDBCol>
-                        <a href="#!">Forgot password?</a>
-                      </MDBCol>
-                    </MDBRow>
+                    
 
                     <MDBBtn type="submit" className="mb-4" color="danger" block>
                       Sign in

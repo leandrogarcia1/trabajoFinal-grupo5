@@ -86,12 +86,42 @@ const QuienesSomos = () => {
                     alt={person.name}
                   />
                   <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
+                    <MDBCardTitle>{person.name}</MDBCardTitle>
                     <MDBCardText>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      
+                        <a
+                          href={person.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon
+                            className="nosotros-icon"
+                            icon={faLinkedin}
+                          />
+                        </a>
+                        <a
+                          href={person.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon
+                            className="nosotros-icon"
+                            icon={faGithub}
+                          />
+                        </a>
+                        <a
+                          href={person.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FontAwesomeIcon
+                            className="nosotros-icon"
+                            icon={faInstagram}
+                          />
+                        </a>
+                      
                     </MDBCardText>
-                    <MDBBtn href="#">Click</MDBBtn>
+                    
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

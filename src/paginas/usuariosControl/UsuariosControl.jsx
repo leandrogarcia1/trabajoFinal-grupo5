@@ -13,8 +13,8 @@ function UsuarioControl() {
     <>
       <Header />
       <BotonHome />
-      <h3>Bienvenido </h3>
-      <h1 className="m-4 text-center font-weight-bold">Control de Usuarios:</h1>
+      <h3 style={{ textAlign: "center", fontSize: "34px", fontWeight: "bold", color: "#333", marginTop: "20px" }}>Bienvenido </h3>
+      <h1 style={{ textAlign: "center", fontSize: "25px", fontWeight: "bold", color: "#333", marginTop: "20px" }}>Control de Usuarios:</h1>
       <BotonNuevoUsuario />
       <TablaUsuarios />
     </>
