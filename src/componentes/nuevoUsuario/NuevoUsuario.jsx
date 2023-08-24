@@ -32,7 +32,7 @@ export default function NuevoUsuario() {
   const handleSudmit = (e)=> {
     e.preventDefault()
     try{
-      const response =axios.post("http://localhost:8081/api/user/usuarios",dataUser)
+      const response =axios.post("http://localhost:8081/api/user/register",dataUser)
       console.log(response)
       setDataUser({
         nombre: "",
