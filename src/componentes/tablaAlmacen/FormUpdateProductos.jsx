@@ -1,11 +1,10 @@
 import { useState, useContext } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { ProductosContext } from '../../context/ProductsContext';
+import { ProductosContext } from "../../context/ProductsContext";
 import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 const FormUpdateProductos = ({ editProducto, handleClose }) => {
-    
   const [producto, setProducto] = useState(editProducto);
 
   const { updateProducto } = useContext(ProductosContext);
@@ -29,7 +28,6 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
   return (
     <>
       <Container>
-      
         <Row>
           <Col>
             <form onSubmit={handleEdit}>
@@ -73,7 +71,7 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
                 />
               </div>
               <div className="mb-3">
-              <label htmlFor="stock" className="form-label">
+                <label htmlFor="stock" className="form-label">
                   Stock
                 </label>
                 <input
@@ -159,7 +157,6 @@ const FormUpdateProductos = ({ editProducto, handleClose }) => {
           </Col>
         </Row>
       </Container>
-      
     </>
   );
 };

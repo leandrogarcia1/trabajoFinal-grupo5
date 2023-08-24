@@ -1,20 +1,12 @@
-
-
-import Registro from "../../componentes/registro/Registro"
-import React from 'react';
-
-
-
+import Registro from "../../componentes/registro/Registro";
+import React from "react";
 
 function Login() {
-  
-
   return (
     <>
-    
-    <Registro/>
+      <Registro />
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;

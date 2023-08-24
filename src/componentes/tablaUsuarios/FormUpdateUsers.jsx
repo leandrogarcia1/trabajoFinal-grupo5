@@ -1,11 +1,10 @@
 import { useState, useContext } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { UsuariosContext } from '../../context/UserContext';
+import { UsuariosContext } from "../../context/UserContext";
 import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 const FormUpdateUsers = ({ editUser, handleClose }) => {
-    
   const [user, setUsers] = useState(editUser);
 
   const { updateUser } = useContext(UsuariosContext);
@@ -29,7 +28,6 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
   return (
     <>
       <Container>
-      
         <Row>
           <Col>
             <form onSubmit={handleEdit}>
@@ -66,7 +64,7 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
                 <input
                   type="text"
                   className="form-control"
-                 value={user.url}
+                  value={user.url}
                   onChange={handleChange}
                   name="img"
                   aria-describedby="Imagen"
@@ -85,8 +83,7 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
                   aria-describedby="Mail"
                 />
               </div>
-              
-              
+
               <div className="mb-3">
                 <label htmlFor="role" className="form-label">
                   Puesto
@@ -94,7 +91,7 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
                 <input
                   type="text"
                   className="form-control"
-                value={user.role}
+                  value={user.role}
                   onChange={handleChange}
                   name="role"
                   aria-describedby="role"
@@ -108,7 +105,7 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
                   type="text"
                   className="form-control"
                   value={user.usuarioAdm}
-                 onChange={handleChange}
+                  onChange={handleChange}
                   name="usuarioAdm"
                   aria-describedby="usuarioAdm"
                 />
@@ -139,7 +136,6 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
                   aria-describedby="telefono"
                 />
               </div>
-              
 
               <Button type="submit" variant="outline-success">
                 {" "}
@@ -149,7 +145,6 @@ const FormUpdateUsers = ({ editUser, handleClose }) => {
           </Col>
         </Row>
       </Container>
-      
     </>
   );
 };

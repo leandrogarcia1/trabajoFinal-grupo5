@@ -89,7 +89,7 @@ export default function AddProducto() {
                     label="Deposito"
                   />
                 </MDBCol>
-                
+
                 <MDBCol>
                   <MDBInput
                     value={productos.stockMinimo}
