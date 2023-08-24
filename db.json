@@ -45,6 +45,83 @@
       "url": "https://picsum.photos/200/300",
       "usuarioAdm": "si",
       "id": 10
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "role": "",
+      "mail": "",
+      "contraseña": "",
+      "telefono": "",
+      "url": "",
+      "usuarioAdm": "",
+      "id": 11
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "gentente",
+      "mail": "garcialeandrofede@gmail.com",
+      "contraseña": "34522",
+      "telefono": "03816271544",
+      "url": "https://picsum.photos/200/300",
+      "usuarioAdm": "si",
+      "id": 12
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "gentente",
+      "mail": "pedrocampero@gmail.com",
+      "contraseña": "cddsss",
+      "telefono": "03816271544",
+      "url": "https://picsum.photos/200/300",
+      "usuarioAdm": "si",
+      "id": 13
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "ayudante",
+      "mail": "pedrocampero@gmail.com",
+      "contraseña": "vfddd",
+      "telefono": "03816271542",
+      "url": "https://picsum.photos/200/300",
+      "usuarioAdm": "si",
+      "id": 14
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "",
+      "mail": "",
+      "contraseña": "",
+      "telefono": "03816271544",
+      "url": "",
+      "usuarioAdm": "",
+      "id": 15
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "",
+      "mail": "",
+      "contraseña": "",
+      "telefono": "03816271544",
+      "url": "",
+      "usuarioAdm": "",
+      "id": 16
+    },
+    {
+      "nombre": "Leandro Federico",
+      "apellido": "Garcia",
+      "role": "",
+      "mail": "",
+      "contraseña": "",
+      "telefono": "03816271544",
+      "url": "",
+      "usuarioAdm": "",
+      "id": 17
     }
   ],
   "productos": [
@@ -119,6 +196,18 @@
       "precio": "5879",
       "nota": "rojos",
       "id": "jdO4JUj"
+    },
+    {
+      "img": "https://picsum.photos/200/300",
+      "producto": "",
+      "deposito": "",
+      "stockMinimo": "",
+      "categoria": "",
+      "stock": "",
+      "fechaControl": "",
+      "precio": "",
+      "nota": "",
+      "id": "Kbcmy12"
     }
   ]
 }

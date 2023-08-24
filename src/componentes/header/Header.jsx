@@ -77,6 +77,7 @@ export default function Header() {
             <MDBNavbarLink href='#'style={{ color: '#FFFFFF' }}>Pedidos</MDBNavbarLink>
             <MDBNavbarLink href='#'style={{ color: '#FFFFFF' }}>Informe y Analisis</MDBNavbarLink>
             <MDBBtn outline className='mx-2' color='danger' onClick={logout}  >Cerrar Sesion</MDBBtn>
+            
           </MDBNavbarNav>
         </div>
       </MDBCollapse>

@@ -29,25 +29,13 @@ export default function Registro() {
   const [contraseña, setContraseña] = useState("");
 
 
-  const {users}=useContext(UsuariosContext)
+  const {users,login }=useContext(UsuariosContext)
   console.log(users, "users")
   console.log(mail, contraseña, "usemail y pasworders")
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const user= users.find(user => user.mail=== mail && user.contraseña === contraseña)
-      console.log(user)
-      if (user){
-        alert("Usuario encontrado")
-        localStorage.setItem("user",JSON.stringify(user))
-        window.location.href="/home"
-      }else{
-        alert("Usuario no encontrado")
-      }
-    } catch (error) {
-      console.log(error)
-    }
+    login(mail,contraseña)
   };
 
 

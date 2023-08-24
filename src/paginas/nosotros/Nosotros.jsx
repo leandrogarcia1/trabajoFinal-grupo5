@@ -11,7 +11,7 @@ function Nosotros() {
       <Header/>
       <div className="bodyBotones">
       <QuienesSomos/>
-      <Contacto/>
+      
       </div>
       
       

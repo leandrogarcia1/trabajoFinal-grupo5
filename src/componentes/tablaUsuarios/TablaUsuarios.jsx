@@ -24,8 +24,8 @@ const handleEdit = (user) => {
   handleShow();
 };
   
-  const handleDelete = (id) => {
-    deleteUsuario(id);
+  const handleDelete = (_id) => {
+    deleteUsuario(_id);
     
     Swal.fire({
       icon: "success",
@@ -61,7 +61,7 @@ const handleEdit = (user) => {
               users.map((user)=>(
       
         
-        <tr key={user.id}>
+        <tr key={user._id}>
           <td>
             <div className='d-flex align-items-center'>
               <img
@@ -93,7 +93,7 @@ const handleEdit = (user) => {
           </td>
           <td>
             <MDBBtn color='link' rounded size='sm'
-            onClick={() => handleDelete(user.id)}>
+            onClick={() => handleDelete(user._id)}>
             <MDBIcon fas icon="trash" />
             </MDBBtn>
           </td>

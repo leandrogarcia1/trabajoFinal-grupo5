@@ -25,8 +25,8 @@ const handleEdit = (producto) => {
   handleShow();
 };
 
-const handleDelete = (id) => {
-  deleteProducto(id);
+const handleDelete = (_id) => {
+  deleteProducto(_id);
   
   Swal.fire({
     icon: "success",
@@ -69,7 +69,7 @@ return (
             productos.map((producto)=>(
     
       
-      <tr key={producto.id}>
+      <tr key={producto._id}>
         <td>
           <div className='d-flex align-items-center'>
             <img
@@ -114,7 +114,7 @@ return (
           
         </td>
         <td>
-          <MDBBtn color='link' rounded size='sm' onClick={() => handleDelete(producto.id)}>
+          <MDBBtn color='link' rounded size='sm' onClick={() => handleDelete(producto._id)}>
           <MDBIcon fas icon="trash" />
           </MDBBtn>
         </td>
@@ -161,7 +161,7 @@ return (
             productos.map((producto)=>(
     
       
-      <tr key={producto.id}>
+      <tr key={producto._id}>
         <td>
           <div className='d-flex align-items-center'>
             <img

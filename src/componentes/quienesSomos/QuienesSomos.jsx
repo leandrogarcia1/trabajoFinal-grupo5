@@ -2,7 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./StyleQuienesSomos.css"
-
+import {
+    MDBBtn,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBCardTitle,
+    MDBCardText,
+    MDBCol
+  } from 'mdbreact';
 const data = [
 {
     id: 1,
@@ -58,7 +66,30 @@ const data = [
 
 const QuienesSomos = () => {
     return (
-        
+        <div>
+    <div className="container-nosotros" >
+        <h1 className="titulo-nosotros">Quiénes Somos</h1>
+        <div className="nosotros-cards">
+            {data.map((person) => (
+                <div key={person.id} className="nosotros-card">
+                    <MDBCol style={{ maxWidth: "22rem" }}>
+                        <MDBCard>
+                            <MDBCardImage className="img-fluid" src={person.image}
+                            waves  alt={person.name} />
+                            <MDBCardBody>
+                            <MDBCardTitle>Card title</MDBCardTitle>
+                            <MDBCardText>Some quick example text to build on the card title and make up the bulk of the card's content.</MDBCardText>
+                            <MDBBtn href="#">Click</MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+                </div>
+                    
+                    ))}
+        </div>
+    </div>
+</div>
+        /*
 <div className="container-nosotros" >
         <h1 className="titulo-nosotros">Quiénes Somos</h1>
         <div className="nosotros-cards">
@@ -81,7 +112,7 @@ const QuienesSomos = () => {
         </div>
     </div>
        
-    
+    */
 );
 };
 
