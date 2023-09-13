@@ -10,7 +10,7 @@
 }
 
 
-.container-nosotros {
+.container-QS {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,14 +21,14 @@
     font-family: sans-serif;
 }
 
-.titulo-nosotros {
+.title-QS {
     text-align: center;
     color: var(--sexto-color);
     font-size: 3rem;
     margin: 2rem;
 }
 
-.nosotros-cards {
+.cards-QS {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-.nosotros-card{
+.card-QS{
     width: 18rem;
     align-items: center;
     justify-content: center;
@@ -49,16 +49,16 @@
     transition: transform .2s; 
 }
 
-.nosotros-card:hover{
+.card-QS:hover{
     transform: scale(1.1);
     box-shadow: 0 0.5rem 1rem var(--quinto-color);
 }
 
-.nosotros-card h2 {
+.card-QS h2 {
     font-size: 1.6rem;
     margin: 1rem;
 }
-.nosotros-image{
+.image-QS{
     display: flex;
     width: 13rem;
     height: 13rem;
@@ -68,7 +68,7 @@
     object-fit: cover;
 }
 
-.nosotros-icon{
+.icon-QS{
     color: var(--sexto-color);
     width: 1.5rem;
     height: 1.5rem;
@@ -77,6 +77,6 @@
     transition: transform .2s; 
 }
 
-.nosotros-icon:hover{
+.icon-QS:hover{
     transform: scale(1.1);
 }

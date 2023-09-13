@@ -58,22 +58,22 @@ const data = [
 
 const QuienesSomos = () => {
     return (
-    <div className="container-nosotros">
-        <h1 className="titulo-nosotros">Quiénes Somos</h1>
-        <div className="nosotros-cards">
+    <div className="container-QS">
+        <h1 className="title-QS">Quiénes Somos</h1>
+        <div className="cards-QS">
             {data.map((person) => (
-            <div key={person.id} className="nosotros-card">
-                <img className="nosotros-image" src={person.image} alt={person.name} />
+            <div key={person.id} className="card-QS">
+                <img className="image-QS" src={person.image} alt={person.name} />
                 <h2>{person.name}</h2>
-                <div className="nosotros-links">
+                <div className="links-QS">
                     <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon className="nosotros-icon" icon={faLinkedin} />
+                    <FontAwesomeIcon className="icon-QS" icon={faLinkedin} />
                     </a>
                     <a href={person.github} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon className="nosotros-icon" icon={faGithub} />
+                    <FontAwesomeIcon className="icon-QS" icon={faGithub} />
                     </a>
                     <a href={person.instagram} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon className="nosotros-icon" icon={faInstagram} />
+                    <FontAwesomeIcon className="icon-QS" icon={faInstagram} />
                     </a>
                 </div>
             </div>))}

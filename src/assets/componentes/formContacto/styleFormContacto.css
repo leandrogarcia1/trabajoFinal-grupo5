@@ -13,14 +13,14 @@
     --sexto-color: #F6F6F6;
 }
 
-.container-contacto{
+.container-FC{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.card {
+.card-FC {
     width: 28.1rem;
     border: 0.1rem solid #ccc;
     border-radius: 5%;
@@ -29,27 +29,27 @@
     margin: 0.7rem;
 }
 
-.card-header {
+.card-header-FC {
     background-color: #333;
     padding: 1rem;
     text-align: center;
 }
 
-.card-header .text-header {
+.card-header-FC .text-header-FC {
     margin: 0;
     font-size: 1.5rem;
     color: var(--sexto-color);
 }
 
-.card-body {
+.card-body-FC {
     padding: 1rem;
 }
 
-.form-group {
+.form-group-FC {
     margin-bottom: 0.7rem;
 }
 
-.form-group label {
+.form-group-FC label {
     display: block;
     font-size: 1rem;
     color: var(--sexto-color);
@@ -57,10 +57,10 @@
     margin-bottom: 0.1rem;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea[type="text"]{
+.form-group-FC input[type="text"],
+.form-group-FC input[type="email"],
+.form-group-FC input[type="tel"],
+.form-group-FC textarea[type="text"]{
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
@@ -68,7 +68,7 @@
     border-radius: 0.25rem;
 }
 
-.form-control {
+.form-control-FC {
     max-width: 400px;
     padding: 0.7rem;
     border: 0.1rem solid #ccc;
@@ -79,11 +79,11 @@
     resize: none;
 }
 
-.form-textarea{
+.form-textarea-FC{
     height: 9.3rem;
 }
 
-.btn {
+.btn-FC {
     padding: 0.75rem 1.5rem;
     margin-left: 0.8rem;
     font-size: 1rem;
@@ -96,13 +96,13 @@
     cursor: pointer
 }
 
-.btn:hover {
+.btn-FC:hover {
     background-color: var(--sexto-color);
     color: var(--quinto-color);
 }
 
 @media (max-width: 768px) {
-    .form-control{
+    .form-control-FC{
         max-width: 100%;
     }
 }

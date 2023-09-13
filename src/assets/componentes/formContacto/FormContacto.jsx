@@ -33,77 +33,77 @@ const Contacto = () => {
 };
 
     return (
-    <div className="container-contacto">
-    <div className="card">
-        <div className="card-header">
-            <h2 className="text-header">Contacto</h2>
+    <div className="container-FC">
+        <div className="card-FC">
+            <div className="card-header-FC">
+                <h2 className="text-header-FC">Contacto</h2>
+            </div>
+            <div className="card-body-FC">
+                <form onSubmit={handleSubmit}>
+                <div className="form-group-FC">
+                    <label htmlFor="nombre">Nombre: </label>
+                    <input
+                        className="form-control-FC"                                                                                                        
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        value={formData.nombre}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group-FC">
+                    <label htmlFor="apellido">Apellido: </label>
+                    <input
+                        className="form-control-FC"
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        value={formData.apellido}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group-FC">
+                    <label htmlFor="email">Email: </label>
+                    <input
+                        className="form-control-FC"
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group-FC">
+                    <label htmlFor="telefono">Teléfono: </label>
+                    <input
+                        className="form-control-FC"
+                        type="tel"
+                        id="phone"
+                        name="telefono"
+                        value={formData.telefono}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group-FC">
+                    <label htmlFor="mensaje">Mensaje: </label>
+                    <textarea
+                        className="form-textarea-FC form-control-FC"
+                        type="text"
+                        id="mensaje"
+                        name="mensaje"
+                        value={formData.mensaje}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <button type="submit" className="btn-FC">Enviar</button>
+                </form>
+            </div>
         </div>
-        <div className="card-body">
-            <form onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor="nombre">Nombre: </label>
-                <input
-                    className="form-control"                                                                                                        
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="apellido">Apellido: </label>
-                <input
-                    className="form-control"
-                    type="text"
-                    id="apellido"
-                    name="apellido"
-                    value={formData.apellido}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="email">Email: </label>
-                <input
-                    className="form-control"
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="telefono">Teléfono: </label>
-                <input
-                    className="form-control"
-                    type="tel"
-                    id="phone"
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="mensaje">Mensaje: </label>
-                <textarea
-                    className="form-textarea form-control"
-                    type="text"
-                    id="mensaje"
-                    name="mensaje"
-                    value={formData.mensaje}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <button type="submit" className="btn">Enviar</button>
-            </form>
-        </div>
-    </div>
     </div>
 );
 };
